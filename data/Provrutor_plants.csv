@@ -1,0 +1,502 @@
+Site;Date;Visit;Side;Quadrant no.;Number of flower heads;Species;Notes;Cut;Observer
+Sigtuna;04/06/2019;1;N;1;298;Hieracium pilosella;;;J
+Sigtuna;04/06/2019;1;N;1;298;Viscaria vulgaris;;;J
+Sigtuna;04/06/2019;1;N;1;298;Saxifraga granulata;;;J
+Sigtuna;04/06/2019;1;N;1;298;Rumex acetosella;;;J
+Sigtuna;04/06/2019;1;N;1;298;Viola arvensis;;;J
+Sigtuna;04/06/2019;1;N;2;47;Pilosella officinarum;;;J
+Sigtuna;04/06/2019;1;N;2;47;Viola arvensis;;;J
+Sigtuna;04/06/2019;1;N;3;444;Viscaria vulgaris;;;J
+Sigtuna;04/06/2019;1;N;3;444;Sedum acetosa;;;J
+Sigtuna;04/06/2019;1;N;3;444;Rumex acetosella;;;J
+Sigtuna;04/06/2019;1;N;3;444;Carum carvi;;;J
+Sigtuna;04/06/2019;1;S;4;25;Lotus corniculatus;;;J
+Sigtuna;04/06/2019;1;S;4;25;Filipendula vulgaris;;;J
+Sigtuna;04/06/2019;1;S;5;0;;;;J
+Sigtuna;04/06/2019;1;S;6;142;Hieracium pilosella;;;J
+Sigtuna;04/06/2019;1;S;6;142;Viscaria vulgaris;;;J
+Sigtuna;04/06/2019;1;S;6;142;Sedum acre;;;J
+Häggeby;04/06/2019;1;S;1;239;Viscaria vulgaris;;;J
+Häggeby;04/06/2019;1;S;1;239;Potentilla argentea;;;J
+Häggeby;04/06/2019;1;S;2;22;Achillea millefolium;;;J
+Häggeby;04/06/2019;1;S;2;22;Vicia hirsuta;;;J
+Häggeby;04/06/2019;1;S;3;105;Viscaria vulgaris;;;J
+Häggeby;04/06/2019;1;N;4;92;Viscaria vulgaris;;;J
+Häggeby;04/06/2019;1;N;4;92;Fragaria vesca;;;J
+Häggeby;04/06/2019;1;N;4;92;Galium boreale;Inga blommor;;J
+Häggeby;04/06/2019;1;N;4;92;Potentilla argentea;Inga blommor;;J
+Häggeby;04/06/2019;1;N;4;92;Silene nutans;;;J
+Häggeby;04/06/2019;1;N;5;0;;;;J
+Häggeby;04/06/2019;1;N;6;65;Acinos arvensis;;;J
+Upplands-Väsby;11/06/2019;1;W;1;87;Cicuta virosa;;;J
+Upplands-Väsby;11/06/2019;1;W;2;0;;Galium boreale som inte slagit ut.;;J
+Upplands-Väsby;11/06/2019;1;W;3;9;Argentina anserina;Achilllea millifolium knopp.;;J
+Upplands-Väsby;11/06/2019;1;E;4;13;Ranunculus acris;;;J
+Upplands-Väsby;11/06/2019;1;E;4;13;Geranium sylvaticum;;;J
+Upplands-Väsby;11/06/2019;1;E;5;230;Lotus corniculatus;;;J
+Upplands-Väsby;11/06/2019;1;E;5;230;Ranunculus acris;;;J
+Upplands-Väsby;11/06/2019;1;E;6;1;Ranunculus acris;;;J
+Enköping;11/06/2019;1;E;1;347;Galium boreale;;;J
+Enköping;11/06/2019;1;E;2;51;Trifolium aureum;;;J
+Enköping;11/06/2019;1;E;2;51;Galium boreale;;;J
+Enköping;11/06/2019;1;E;3;4;Galium boreale;;;J
+Enköping;11/06/2019;1;W;4;108;Cicuta virosa;;;J
+Enköping;11/06/2019;1;W;4;108;Galium boreale;;;J
+Enköping;11/06/2019;1;W;5;0;;;;J
+Enköping;11/06/2019;1;W;6;15;Anthriscus sylvestris;;;J
+Aspö;11/06/2019;1;W;1;697;Hieracium pilosella;;;J
+Aspö;11/06/2019;1;W;1;697;Rumex acetosella;;;J
+Aspö;11/06/2019;1;W;1;697;Silene nutans;;;J
+Aspö;11/06/2019;1;W;2;310;Trifolium pratense;;;J
+Aspö;11/06/2019;1;W;2;310;Galium boreale;;;J
+Aspö;11/06/2019;1;W;3;396;Galium boreale;;;J
+Aspö;11/06/2019;1;E;4;0;;;;J
+Aspö;11/06/2019;1;E;5;21;Hieracium pilosella;;;J
+Aspö;11/06/2019;1;E;6;36;Hieracium pilosella;;;J
+Tosterön;11/06/2019;1;W;1;8;Ranunculus acris;;;J
+Tosterön;11/06/2019;1;W;2;9;Ranunculus acris;;;J
+Tosterön;11/06/2019;1;W;2;9;Galium boreale;;;J
+Tosterön;11/06/2019;1;W;3;87;Galium boreale;;;J
+Tosterön;11/06/2019;1;E;4;0;;;;J
+Tosterön;11/06/2019;1;E;5;12;Vicia cracca;;;J
+Tosterön;11/06/2019;1;E;6;1;Vicia cracca;;;J
+Strängnäs;11/06/2019;1;E;1;35;Anthriscus sylvestris;;;J
+Strängnäs;11/06/2019;1;E;2;43;Galium boreale;;;J
+Strängnäs;11/06/2019;1;E;2;43;Centaurea cyanus;;;J
+Strängnäs;11/06/2019;1;E;3;30;Achillea millefolium;;;J
+Strängnäs;11/06/2019;1;E;3;30;Anthriscus sylvestris;;;J
+Strängnäs;11/06/2019;1;E;3;30;Lotus corniculatus;;;J
+Strängnäs;11/06/2019;1;E;3;30;Potentilla argentea;;;J
+Strängnäs;11/06/2019;1;W;4;30;Trifolium repens;;;J
+Strängnäs;11/06/2019;1;W;4;30;Lotus corniculatus;;;J
+Strängnäs;11/06/2019;1;W;4;30;Achillea millefolium;;;J
+Strängnäs;11/06/2019;1;W;5;70;Vicia hirsuta;;;J
+Strängnäs;11/06/2019;1;W;5;70;Centaurea cyanus;;;J
+Strängnäs;11/06/2019;1;W;6;1;Hieracium pilosella;;;J
+Björklinge;12/06/2019;1;N;1;63;Galium boreale;;;J
+Björklinge;12/06/2019;1;N;2;120;Galium boreale;;;J
+Björklinge;12/06/2019;1;N;2;120;Anthriscus sylvestris;;;J
+Björklinge;12/06/2019;1;N;3;0;;;;J
+Björklinge;12/06/2019;1;S;4;65;Galium boreale;;;J
+Björklinge;12/06/2019;1;S;4;65;Anthriscus sylvestris;;;J
+Björklinge;12/06/2019;1;S;4;65;Rosa dumalis;;;J
+Björklinge;12/06/2019;1;S;5;40;Galium boreale;;;J
+Björklinge;12/06/2019;1;S;5;40;Taraxacum spp;;;J
+Björklinge;12/06/2019;1;S;6;26;Galium boreale;;;J
+Björklinge;12/06/2019;1;S;6;26;Taraxacum spp;;;J
+Skogstibble;12/06/2019;1;N;1;64;Anthriscus sylvestris;;;J
+Skogstibble;12/06/2019;1;N;2;30;Lotus corniculatus;;;J
+Skogstibble;12/06/2019;1;N;3;42;Achillea millefolium;;;J
+Skogstibble;12/06/2019;1;N;3;42;Galium boreale;;;J
+Skogstibble;12/06/2019;1;N;3;42;Lathyrus pratensis;;;J
+Skogstibble;12/06/2019;1;N;3;42;Potentilla argentea;;;J
+Skogstibble;12/06/2019;1;S;4;171;Anthriscus sylvestris;;;J
+Skogstibble;12/06/2019;1;S;5;95;Galium boreale;;;J
+Skogstibble;12/06/2019;1;S;5;95;Achillea millefolium;;;J
+Skogstibble;12/06/2019;1;S;6;147;Anthriscus sylvestris;;;J
+Skogstibble;12/06/2019;1;S;6;147;Galium boreale;;;J
+Skogstibble;12/06/2019;1;S;6;147;Ranunculus acris;;;J
+Vänge;12/06/2019;1;E;1;216;Galium boreale;;;J
+Vänge;12/06/2019;1;E;1;216;Hieracium pilosella;;;J
+Vänge;12/06/2019;1;E;1;216;Leucanthemum vulgare;;;J
+Vänge;12/06/2019;1;E;2;162;Galium boreale;;;J
+Vänge;12/06/2019;1;E;2;162;Anthriscus sylvestris;;;J
+Vänge;12/06/2019;1;E;2;162;Trifolium pratense;;;J
+Vänge;12/06/2019;1;E;3;156;Achillea millefolium;;;J
+Vänge;12/06/2019;1;E;3;156;Hieracium pilosella;;;J
+Vänge;12/06/2019;1;E;3;156;Galium boreale;;;J
+Vänge;12/06/2019;1;W;4;19;Achillea millefolium;;;J
+Vänge;12/06/2019;1;W;4;19;Hieracium pilosella;;;J
+Vänge;12/06/2019;1;W;4;19;Galium boreale;;;J
+Vänge;12/06/2019;1;W;5;74;Hieracium pilosella;;;J
+Vänge;12/06/2019;1;W;5;74;Galium boreale;;;J
+Vänge;12/06/2019;1;W;5;74;Anthriscus sylvestris;;;J
+Vänge;12/06/2019;1;W;5;74;Rumex acetosella;;;J
+Vänge;12/06/2019;1;W;6;0;;;;J
+Skärplinge;07/08/2019;2;E;1;9;Centaurea jacea;;;J
+Skärplinge;07/08/2019;2;E;1;9;Trifolium pratense;;;J
+Skärplinge;07/08/2019;2;E;1;9;Scorzoneroides autumnalis;;;J
+Skärplinge;07/08/2019;2;E;2;54;Achillea millefolium;;;J
+Skärplinge;07/08/2019;2;E;2;54;Anthriscus sylvestris;samt död rödklöver, räknades inte.;;J
+Skärplinge;07/08/2019;2;E;3;101;Centaurea jacea;;;J
+Skärplinge;07/08/2019;2;W;4;13;Tripleurospermum inodorum;;;J
+Skärplinge;07/08/2019;2;W;4;13;Achillea millefolium;;;J
+Skärplinge;07/08/2019;2;W;5;96;Centaurea jacea;;;J
+Skärplinge;07/08/2019;2;W;5;96;Scorzoneroides autumnalis;;;J
+Skärplinge;07/08/2019;2;W;6;132;Centaurea jacea;;;J
+Tosterön;08/08/2019;2;W;1;0;;;;J
+Tosterön;08/08/2019;2;W;2;10;Achillea millefolium;;;J
+Tosterön;08/08/2019;2;W;2;10;Scorzoneroides autumnalis;;;J
+Tosterön;08/08/2019;2;W;3;2;Centaurea jacea;;;J
+Tosterön;08/08/2019;2;E;4;0;;Torra Trifolium pratense;;J
+Tosterön;08/08/2019;2;E;5;0;;;;J
+Tosterön;08/08/2019;2;E;6;0;;;;J
+Strängnäs;09/08/2019;2;E;1;0;;Vägrenen nyslagen.;Y;J
+Strängnäs;09/08/2019;2;E;2;27;Scorzoneroides autumnalis;Vägrenen nyslagen.;Y;J
+Strängnäs;09/08/2019;2;E;3;0;;Vägrenen nyslagen.;Y;J
+Strängnäs;09/08/2019;2;W;4;0;;Vägrenen nyslagen.;Y;J
+Strängnäs;09/08/2019;2;W;5;0;;Vägrenen nyslagen.;Y;J
+Strängnäs;09/08/2019;2;W;6;0;;Vägrenen nyslagen.;Y;J
+Upplands-Väsby;12/08/2019;2;W;1;6;Matricaria chamomilla;;;J
+Upplands-Väsby;12/08/2019;2;W;1;6;Scorzoneroides autumnalis;;;J
+Upplands-Väsby;12/08/2019;2;W;2;12;Taraxacum spp;;;J
+Upplands-Väsby;12/08/2019;2;W;3;4;Achillea millefolium;;;J
+Upplands-Väsby;12/08/2019;2;E;4;0;;;;J
+Upplands-Väsby;12/08/2019;2;E;5;0;;;;J
+Upplands-Väsby;12/08/2019;2;E;6;18;Matricaria chamomilla;;;J
+Aspö;12/08/2019;2;W;1;8;Hylotelephium telephium;;;J
+Aspö;12/08/2019;2;W;2;0;;Torra Trifolium pratense;;J
+Aspö;12/08/2019;2;W;3;44;Galium boreale;;;J
+Aspö;12/08/2019;2;W;3;44;Achillea millefolium;;;J
+Aspö;12/08/2019;2;E;4;11;Tripleurospermum inodorum;Sida med ganska många Hylotelephium telephium ;;J
+Aspö;12/08/2019;2;E;5;0;;Sida med ganska många Hylotelephium telephium ;;J
+Aspö;12/08/2019;2;E;6;0;;Torra Trifolium pratense. Sida med ganska många Hylotelephium telephium.;;J
+Skutskär;13/08/2019;2;E;1;0;;Vägrenen nyslagen.;Y;J
+Skutskär;13/08/2019;2;E;2;0;;Vägrenen nyslagen.;Y;J
+Skutskär;13/08/2019;2;E;3;0;;Vägrenen nyslagen.;Y;J
+Skutskär;13/08/2019;2;W;4;0;;Vägrenen nyslagen.;Y;J
+Skutskär;13/08/2019;2;W;5;6;Lotus corniculatus;Vägrenen nyslagen.;Y;J
+Skutskär;13/08/2019;2;W;6;0;;Vägrenen nyslagen.;Y;J
+Björklinge;13/08/2019;2;N;1;15;Galium boreale;;;J
+Björklinge;13/08/2019;2;N;2;16;Campanula rotundifolia;;;J
+Björklinge;13/08/2019;2;N;2;16;Galium boreale;;;J
+Björklinge;13/08/2019;2;N;3;47;Achillea millefolium;;;J
+Björklinge;13/08/2019;2;N;3;47;Galium boreale;;;J
+Björklinge;13/08/2019;2;N;3;47;Scorzoneroides autumnalis;;;J
+Björklinge;13/08/2019;2;N;3;47;Calystegia sepium;;;J
+Björklinge;13/08/2019;2;S;4;105;Galium boreale;;;J
+Björklinge;13/08/2019;2;S;5;7;Achillea millefolium;;;J
+Björklinge;13/08/2019;2;S;6;29;Scorzoneroides autumnalis;;;J
+Björklinge;13/08/2019;2;S;6;29;Galium boreale;;;J
+Skogstibble;14/08/2019;2;N;1;0;;Vägrenen nyslagen.;Y;J
+Skogstibble;14/08/2019;2;N;2;26;Scorzoneroides autumnalis;Vägrenen slagen;Y;J
+Skogstibble;14/08/2019;2;N;2;26;Trifolium pratense;Vägrenen slagen;Y;J
+Skogstibble;14/08/2019;2;N;2;26;Trifolium repens;Vägrenen slagen;Y;J
+Skogstibble;14/08/2019;2;N;2;26;Galium boreale;Vägrenen slagen;Y;J
+Skogstibble;14/08/2019;2;N;3;82;Achillea millefolium;Vägrenen slagen;Y;J
+Skogstibble;14/08/2019;2;N;3;82;Trifolium repens;Vägrenen slagen;Y;J
+Skogstibble;14/08/2019;2;S;4;14;Scorzoneroides autumnalis;Vägrenen slagen;Y;J
+Skogstibble;14/08/2019;2;S;5;25;Scorzoneroides autumnalis;Vägrenen slagen;Y;J
+Skogstibble;14/08/2019;2;S;6;112;Scorzoneroides autumnalis;Vägrenen slagen;Y;J
+Vänge;14/08/2019;2;E;1;1;Hieracium spp;Vägrenen slagen för ett tag sedan.;Y;J
+Vänge;14/08/2019;2;E;2;25;Trifolium pratense;Vägrenen slagen för ett tag sedan.;Y;J
+Vänge;14/08/2019;2;E;2;25;Galium boreale;Vägrenen slagen för ett tag sedan.;Y;J
+Vänge;14/08/2019;2;E;3;10;Galium boreale;Vägrenen slagen för ett tag sedan.;Y;J
+Vänge;14/08/2019;2;W;4;35;Galium boreale;Vägrenen slagen för ett tag sedan.;Y;J
+Vänge;14/08/2019;2;W;4;35;Potentilla argentea;Vägrenen slagen för ett tag sedan.;Y;J
+Vänge;14/08/2019;2;W;5;44;Galium boreale;Vägrenen slagen för ett tag sedan.;Y;J
+Vänge;14/08/2019;2;W;6;1;Scorzoneroides autumnalis;Vägrenen slagen för ett tag sedan.;Y;J
+Tierp;15/08/2019;2;N;2;10;Achillea millefolium;Vägrenen slagen;Y;J
+Tierp;15/08/2019;2;N;2;10;Campanula persicifolia;Vägrenen slagen;Y;J
+Tierp;15/08/2019;2;N;3;67;Galium boreale;Vägrenen slagen;Y;J
+Tierp;15/08/2019;2;N;1;0;;Vägrenen slagen;Y;J
+Tierp;15/08/2019;2;S;5;26;Achillea millefolium;Vägrenen slagen;Y;J
+Tierp;15/08/2019;2;S;5;26;Campanula patula;Vägrenen slagen;Y;J
+Tierp;15/08/2019;2;S;6;0;;Vägrenen slagen;Y;J
+Tierp;15/08/2019;2;S;4;3;Ranunculus acris;Vägrenen slagen;Y;J
+Knutby;10/06/2019;1;E;3;425;Ranunculus acris;;;C
+Knutby;10/06/2019;1;E;3;425;Anthriscus sylvestris;;;C
+Knutby;10/06/2019;1;E;2;594;Anthriscus sylvestris;;;C
+Knutby;10/06/2019;1;E;2;594;Veronica chamaedrys;;;C
+Knutby;10/06/2019;1;E;2;594;Fragaria vesca;;;C
+Knutby;10/06/2019;1;E;2;594;Ranunculus acris;;;C
+Knutby;10/06/2019;1;E;2;594;Vicia sepium;;;C
+Knutby;10/06/2019;1;E;2;594;Geranium sylvaticum;;;C
+Knutby;10/06/2019;1;E;1;34;Ranunculus acris;;;C
+Knutby;10/06/2019;1;E;1;34;Veronica chamaedrys;;;C
+Knutby;10/06/2019;1;E;1;34;Geranium sylvaticum;;;C
+Knutby;10/06/2019;1;E;1;34;Lotus corniculatus;;;C
+Knutby;10/06/2019;1;W;6;1105;Anthriscus sylvestris;;;C
+Knutby;10/06/2019;1;W;6;1105;Ranunculus acris;;;C
+Knutby;10/06/2019;1;W;6;1105;Hieracium pilosella;;;C
+Knutby;10/06/2019;1;W;5;11;Vicia sepium;;;C
+Knutby;10/06/2019;1;W;5;11;Lotus corniculatus;;;C
+Knutby;10/06/2019;1;W;5;11;Veronica chamaedrys;;;C
+Knutby;10/06/2019;1;W;4;56;Veronica chamaedrys;;;C
+Knutby;10/06/2019;1;W;4;56;Vicia sepium;;;C
+Knutby;10/06/2019;1;W;4;56;Fragaria vesca;;;C
+Östhammar;11/06/2019;1;W;4;19;Ranunculus acris;;;C
+Östhammar;11/06/2019;1;W;5;450;Anthriscus sylvestris;;;C
+Östhammar;11/06/2019;1;W;6;66;Ranunculus acris;;;C
+Östhammar;11/06/2019;1;W;6;66;Hieracium pilosella;;;C
+Östhammar;11/06/2019;1;W;6;66;Viscaria vulgaris;;;C
+Östhammar;11/06/2019;1;E;1;181;Anthriscus sylvestris;;;C
+Östhammar;11/06/2019;1;E;1;181;Achillea millefolium;;;C
+Östhammar;11/06/2019;1;E;2;2;Vicia cracca;;;C
+Östhammar;11/06/2019;1;E;3;76;Ranunculus acris;;;C
+Östhammar;11/06/2019;1;E;3;76;Hieracium pilosella;;;C
+Östhammar;11/06/2019;1;E;3;76;Viscaria vulgaris;;;C
+Rovsättra;11/06/2019;1;W;4;371;Geranium sylvaticum;;;C
+Rovsättra;11/06/2019;1;W;4;371;Anthriscus sylvestris;;;C
+Rovsättra;11/06/2019;1;W;5;76;Geranium sylvaticum;;;C
+Rovsättra;11/06/2019;1;W;5;76;Lotus corniculatus;;;C
+Rovsättra;11/06/2019;1;W;5;76;Cerastium fontanum;;;C
+Rovsättra;11/06/2019;1;W;5;76;Rumex acetosa;;;C
+Rovsättra;11/06/2019;1;W;6;28;Ranunculus acris;;;C
+Rovsättra;11/06/2019;1;W;6;28;Vicia sepium;;;C
+Rovsättra;11/06/2019;1;W;6;28;Veronica chamaedrys;;;C
+Rovsättra;11/06/2019;1;W;6;28;Lotus corniculatus;;;C
+Rovsättra;11/06/2019;1;W;6;28;Tragopogon pratensis;;;C
+Rovsättra;11/06/2019;1;E;1;24;Geranium sylvaticum;;;C
+Rovsättra;11/06/2019;1;E;1;24;Trifolium medium;;;C
+Rovsättra;11/06/2019;1;E;2;486;Geranium sylvaticum;;;C
+Rovsättra;11/06/2019;1;E;2;486;Vicia sepium;;;C
+Rovsättra;11/06/2019;1;E;2;486;Fragaria vesca;;;C
+Rovsättra;11/06/2019;1;E;2;486;Anthriscus sylvestris;;;C
+Rovsättra;11/06/2019;1;E;2;486;Ranunculus acris;;;C
+Rovsättra;11/06/2019;1;E;2;486;Potentilla erecta;;;C
+Rovsättra;11/06/2019;1;E;2;486;Cerastium fontanum;;;C
+Rovsättra;11/06/2019;1;E;3;118;Lotus corniculatus;;;C
+Rovsättra;11/06/2019;1;E;3;118;Geranium sylvaticum;;;C
+Hargshamn;11/06/2019;1;E;1;30;Carum carvi;;;C
+Hargshamn;11/06/2019;1;E;2;133;Hieracium pilosella;;;C
+Hargshamn;11/06/2019;1;E;2;133;Achillea millefolium;;;C
+Hargshamn;11/06/2019;1;E;3;122;Vicia cracca;;;C
+Hargshamn;11/06/2019;1;E;3;122;Hieracium pilosella;;;C
+Hargshamn;11/06/2019;1;E;3;122;Lathyrus pratensis;;;C
+Hargshamn;11/06/2019;1;E;3;122;Achillea millefolium;;;C
+Hargshamn;11/06/2019;1;W;4;228;Ranunculus acris;;;C
+Hargshamn;11/06/2019;1;W;4;228;Anthriscus sylvestris;;;C
+Hargshamn;11/06/2019;1;W;4;228;Veronica chamaedrys;;;C
+Hargshamn;11/06/2019;1;W;5;265;Vicia cracca;;;C
+Hargshamn;11/06/2019;1;W;5;265;Achillea millefolium;;;C
+Hargshamn;11/06/2019;1;W;6;25;Hieracium pilosella;;;C
+Rimbo;12/06/2019;1;N;4;111;Hieracium pilosella;;;C
+Rimbo;12/06/2019;1;N;4;111;Vicia cracca;;;C
+Rimbo;12/06/2019;1;N;4;111;Rosa dumalis;;;C
+Rimbo;12/06/2019;1;N;4;111;Polygala vulgaris;;;C
+Rimbo;12/06/2019;1;N;5;300;Hieracium pilosella;;;C
+Rimbo;12/06/2019;1;N;5;300;Lathyrus pratensis;;;C
+Rimbo;12/06/2019;1;N;5;300;Veronica chamaedrys;;;C
+Rimbo;12/06/2019;1;N;5;300;Vicia cracca;;;C
+Rimbo;12/06/2019;1;N;5;300;Lathyrus linifolius;;;C
+Rimbo;12/06/2019;1;N;5;300;Galium album;;;C
+Rimbo;12/06/2019;1;N;5;300;Galium boreale;;;C
+Rimbo;12/06/2019;1;N;5;300;Filipendula vulgaris;;;C
+Rimbo;12/06/2019;1;N;6;284;Geranium sylvaticum;;;C
+Rimbo;12/06/2019;1;N;6;284;Viscaria vulgaris;;;C
+Rimbo;12/06/2019;1;S;1;35;Geranium sylvaticum;;;C
+Rimbo;12/06/2019;1;S;2;2;Fragaria vesca;;;C
+Rimbo;12/06/2019;1;S;2;2;Ranunculus acris;;;C
+Rimbo;12/06/2019;1;S;3;70;Geranium sylvaticum;;;C
+Rimbo;12/06/2019;1;S;3;70;Ranunculus acris;;;C
+Rimbo;12/06/2019;1;S;3;70;Trifolium repens;;;C
+Gottröra;12/06/2019;1;S;2;121;Ranunculus acris;;;C
+Gottröra;12/06/2019;1;S;2;121;Lotus corniculatus;;;C
+Gottröra;12/06/2019;1;S;2;121;Vicia tetrasperma;;;C
+Gottröra;12/06/2019;1;S;2;121;Leucanthemum vulgare;;;C
+Gottröra;12/06/2019;1;S;1;119;Ranunculus acris;;;C
+Gottröra;12/06/2019;1;S;1;119;Anthriscus sylvestris;;;C
+Gottröra;12/06/2019;1;S;3;0;;;;C
+Gottröra;12/06/2019;1;N;6;26;Ranunculus acris;;;C
+Gottröra;12/06/2019;1;N;5;75;Ranunculus acris;;;C
+Gottröra;12/06/2019;1;N;5;75;Viscaria vulgaris;;;C
+Gottröra;12/06/2019;1;N;5;75;Lotus corniculatus;;;C
+Gottröra;12/06/2019;1;N;5;75;Anthriscus sylvestris;;;C
+Gottröra;12/06/2019;1;N;4;88;Anthriscus sylvestris;;;C
+Skärplinge;13/06/2019;1;W;4;550;Geranium sylvaticum;;;C
+Skärplinge;13/06/2019;1;W;4;550;Ranunculus acris;;;C
+Skärplinge;13/06/2019;1;W;4;550;Anthriscus sylvestris;;;C
+Skärplinge;13/06/2019;1;W;4;550;Carum carvi;;;C
+Skärplinge;13/06/2019;1;W;4;550;Convallaria majalis;;;C
+Skärplinge;13/06/2019;1;W;4;550;Hieracium murorum;;;C
+Skärplinge;13/06/2019;1;W;4;550;Polygala amarella;;;C
+Skärplinge;13/06/2019;1;W;4;550;Centaurea montana;;;C
+Skärplinge;13/06/2019;1;W;5;331;Anthriscus sylvestris;;;C
+Skärplinge;13/06/2019;1;W;5;331;Ranunculus acris;;;C
+Skärplinge;13/06/2019;1;W;5;331;Achillea millefolium;;;C
+Skärplinge;13/06/2019;1;W;5;331;Trifolium aureum;;;C
+Skärplinge;13/06/2019;1;W;5;331;Galium boreale;;;C
+Skärplinge;13/06/2019;1;W;5;331;Tragopogon pratensis;;;C
+Skärplinge;13/06/2019;1;W;6;45;Hieracium pilosella;;;C
+Skärplinge;13/06/2019;1;W;6;45;Trifolium aureum;;;C
+Skärplinge;13/06/2019;1;E;1;9;Geranium sylvaticum;;;C
+Skärplinge;13/06/2019;1;E;1;9;Ranunculus acris;;;C
+Skärplinge;13/06/2019;1;E;2;172;Ranunculus acris;;;C
+Skärplinge;13/06/2019;1;E;2;172;Achillea millefolium;;;C
+Skärplinge;13/06/2019;1;E;2;172;Galium album;;;C
+Skärplinge;13/06/2019;1;E;3;431;Hieracium pilosella;;;C
+Skärplinge;13/06/2019;1;E;3;431;Ranunculus acris;;;C
+Skärplinge;13/06/2019;1;E;3;431;Leucanthemum vulgare;;;C
+Skärplinge;13/06/2019;1;E;3;431;Anthriscus sylvestris;;;C
+Skärplinge;13/06/2019;1;E;3;431;Achillea millefolium;;;C
+Skutskär;13/06/2019;1;E;1;52;Ranunculus acris;;;C
+Skutskär;13/06/2019;1;E;1;52;Pilosella cymosa;;;C
+Skutskär;13/06/2019;1;E;2;26;Ranunculus acris;;;C
+Skutskär;13/06/2019;1;E;2;26;Hieracium murorum;;;C
+Skutskär;13/06/2019;1;E;3;395;Ranunculus acris;;;C
+Skutskär;13/06/2019;1;E;3;395;Anthriscus sylvestris;;;C
+Skutskär;13/06/2019;1;E;3;395;Carum carvi;;;C
+Skutskär;13/06/2019;1;E;3;395;Hieracium murorum;;;C
+Skutskär;13/06/2019;1;E;3;395;Trifolium aureum;;;C
+Skutskär;13/06/2019;1;E;3;395;Polygala amarella;;;C
+Skutskär;13/06/2019;1;W;4;54;Lotus corniculatus;;;C
+Skutskär;13/06/2019;1;W;4;54;Trifolium aureum;;;C
+Skutskär;13/06/2019;1;W;5;5;Fragaria vesca;;;C
+Skutskär;13/06/2019;1;W;6;56;Lotus corniculatus;;;C
+Skutskär;13/06/2019;1;W;6;56;Tragopogon pratense;;;C
+Skutskär;13/06/2019;1;W;6;56;Vicia cracca;;;C
+Skutskär;13/06/2019;1;W;6;56;Hieracium murorum;;;C
+Tierp;13/06/2019;1;S;4;178;Viscaria vulgaris;;;C
+Tierp;13/06/2019;1;S;4;178;Hieracium pilosella;;;C
+Tierp;13/06/2019;1;S;4;178;Veronica chamaedrys;;;C
+Tierp;13/06/2019;1;S;5;462;Anthriscus sylvestris;;;C
+Tierp;13/06/2019;1;S;5;462;Myosotis arvensis;;;C
+Tierp;13/06/2019;1;S;5;462;Ranunculus acris;;;C
+Tierp;13/06/2019;1;S;6;296;Anthriscus sylvestris;;;C
+Tierp;13/06/2019;1;S;6;296;Ranunculus acris;;;C
+Tierp;13/06/2019;1;S;6;296;Lotus corniculatus;;;C
+Tierp;13/06/2019;1;N;1;5;Trifolium pratense;;;C
+Tierp;13/06/2019;1;N;1;5;Ranunculus acris;;;C
+Tierp;13/06/2019;1;N;2;470;Anthriscus sylvestris;;;C
+Tierp;13/06/2019;1;N;2;470;Ranunculus acris;;;C
+Tierp;13/06/2019;1;N;2;470;Myosotis arvensis;;;C
+Tierp;13/06/2019;1;N;2;470;Vicia cracca;;;C
+Tierp;13/06/2019;1;N;2;470;Trifolium pratense;;;C
+Tierp;13/06/2019;1;N;2;470;Arabidopsis arenosa;;;C
+Tierp;13/06/2019;1;N;3;11;Geranium sylvaticum;;;C
+Tierp;13/06/2019;1;N;3;11;Ranunculus acris;;;C
+Arlanda;14/06/2019;1;W;4;213;Viscaria vulgaris;;;C
+Arlanda;14/06/2019;1;W;4;213;Achillea millefolium;;;C
+Arlanda;14/06/2019;1;W;4;213;Lotus corniculatus;;;C
+Arlanda;14/06/2019;1;W;4;213;Hieracium pilosella;;;C
+Arlanda;14/06/2019;1;W;4;213;Trifolium hybridum;;;C
+Arlanda;14/06/2019;1;W;4;213;Lathyrus linifolius;;;C
+Arlanda;14/06/2019;1;W;5;114;Achillea millefolium;;;C
+Arlanda;14/06/2019;1;W;5;114;Trifolium hybridum;;;C
+Arlanda;14/06/2019;1;W;5;114;Vicia cracca;;;C
+Arlanda;14/06/2019;1;W;5;114;Lathyrus pratensis;;;C
+Arlanda;14/06/2019;1;W;6;87;Ranunculus acris;;;C
+Arlanda;14/06/2019;1;W;6;87;Galium album;;;C
+Arlanda;14/06/2019;1;W;6;87;Lotus corniculatus;;;C
+Arlanda;14/06/2019;1;W;6;87;Potentilla erecta;;;C
+Arlanda;14/06/2019;1;E;1;19;Hieracium pilosella;;;C
+Arlanda;14/06/2019;1;E;1;19;Polygala vulgaris;;;C
+Arlanda;14/06/2019;1;E;1;19;Stellaria longifolia;;;C
+Arlanda;14/06/2019;1;E;2;36;Vicia cracca;;;C
+Arlanda;14/06/2019;1;E;2;36;Potentilla erecta;;;C
+Arlanda;14/06/2019;1;E;2;36;Leucanthemum vulgare;;;C
+Arlanda;14/06/2019;1;E;2;36;Hieracium pilosella;;;C
+Arlanda;14/06/2019;1;E;2;36;Hieracium murorum;;;C
+Arlanda;14/06/2019;1;E;3;84;Achillea millefolium;;;C
+Arlanda;14/06/2019;1;E;3;84;Potentilla erecta;;;C
+Arlanda;14/06/2019;1;E;3;84;Pilosella cymosa;;;C
+Östhammar;05/08/2019;2;W;6;15;Galium verum;;;C
+Östhammar;05/08/2019;2;W;5;158;Achillea millefolium;;;C
+Östhammar;05/08/2019;2;W;5;158;Vicia cracca;;;C
+Östhammar;05/08/2019;2;W;5;158;Lathyrus pratensis;;;C
+Östhammar;05/08/2019;2;W;4;229;Achillea millefolium;;;C
+Östhammar;05/08/2019;2;W;4;229;Trifolium pratense;;;C
+Östhammar;05/08/2019;2;W;4;229;Spectabilis sp;;;C
+Östhammar;05/08/2019;2;E;3;48;Galium boreale;;;C
+Östhammar;05/08/2019;2;E;2;181;Vicia cracca;;;C
+Östhammar;05/08/2019;2;E;2;181;Achillea millefolium;;;C
+Östhammar;05/08/2019;2;E;2;181;Lathyrus pratensis;;;C
+Östhammar;05/08/2019;2;E;1;75;Galium boreale;;;C
+Arlanda;05/08/2019;2;W;4;74;Lotus corniculatus;Mown (slaget sedan tidigare);Y;C
+Arlanda;05/08/2019;2;W;4;74;Achillea millefolium;Mown;Y;C
+Arlanda;05/08/2019;2;W;4;74;Lathyrus linifolius;Mown;Y;C
+Arlanda;05/08/2019;2;W;4;74;Hieracium canadense;Mown;Y;C
+Arlanda;05/08/2019;2;W;4;74;Trifolium hybridum;Mown;Y;C
+Arlanda;05/08/2019;2;W;5;0;;Mown;Y;C
+Arlanda;05/08/2019;2;W;6;27;Lotus corniculatus;Mown;Y;C
+Arlanda;05/08/2019;2;W;6;27;Potentilla erecta;Mown;Y;C
+Arlanda;05/08/2019;2;W;6;27;Rhinanthus minor;Mown;Y;C
+Arlanda;05/08/2019;2;E;1;452;Calluna vulgaris;Mown;Y;C
+Arlanda;05/08/2019;2;E;1;452;Solidago virgaurea;Mown;Y;C
+Arlanda;05/08/2019;2;E;2;85;Potentilla erecta;Mown;Y;C
+Arlanda;05/08/2019;2;E;2;85;Calluna vulgaris;Mown;Y;C
+Arlanda;05/08/2019;2;E;2;85;Vicia cracca;Mown;Y;C
+Arlanda;05/08/2019;2;E;2;85;Hieracium murorum;Mown;Y;C
+Arlanda;05/08/2019;2;E;3;88;Achillea millefolium;Mown;Y;C
+Arlanda;05/08/2019;2;E;3;88;Achillea ptarmica;Mown;Y;C
+Arlanda;05/08/2019;2;E;3;88;Hypericum maculatum;Mown;Y;C
+Arlanda;05/08/2019;2;E;3;88;Mentha arvensis;Mown;Y;C
+Knutby;05/08/2019;2;E;1;128;Melampyrum nemorosum;Mown;Y;C
+Knutby;05/08/2019;2;E;1;128;Hieracium canadense;Mown;Y;C
+Knutby;05/08/2019;2;E;1;128;Pimpinella saxifraga;Mown;Y;C
+Knutby;05/08/2019;2;E;1;128;Galium verum;Mown;Y;C
+Knutby;05/08/2019;2;E;2;5;Tripleurospermum inodorum;Mown;Y;C
+Knutby;05/08/2019;2;E;3;0;;Mown;Y;C
+Knutby;05/08/2019;2;W;4;15;Vicia cracca;Mown;Y;C
+Knutby;05/08/2019;2;W;4;15;Galium verum;Mown;Y;C
+Knutby;05/08/2019;2;W;4;15;Galium album;Mown;Y;C
+Knutby;05/08/2019;2;W;5;17;Galium album;Mown;Y;C
+Knutby;05/08/2019;2;W;5;17;Campanula rotundifolia;Mown;Y;C
+Knutby;05/08/2019;2;W;6;33;Achillea millefolium;Mown;Y;C
+Knutby;05/08/2019;2;W;6;33;Galium album;Mown;Y;C
+Rovsättra;05/08/2019;2;W;6;0;;Mown;Y;C
+Rovsättra;05/08/2019;2;W;5;0;;Mown;Y;C
+Rovsättra;05/08/2019;2;W;4;1;Potentilla crantzii;Mown;Y;C
+Rovsättra;05/08/2019;2;E;3;2;Potentilla crantzii;Mown;Y;C
+Rovsättra;05/08/2019;2;E;3;2;Galium album;Mown;Y;C
+Rovsättra;05/08/2019;2;E;2;1;Cerastium fontanum;Mown;Y;C
+Rovsättra;05/08/2019;2;E;1;5;Achillea millefolium;Mown;Y;C
+Häggeby;06/08/2019;2;S;3;5;Potentilla argentea;;;C
+Häggeby;06/08/2019;2;S;3;5;Tripleurospermum inodorum;;;C
+Häggeby;06/08/2019;2;S;2;1;Tripleurospermum inodorum;;;C
+Häggeby;06/08/2019;2;S;1;15;Dianthus deltoides;;;C
+Häggeby;06/08/2019;2;S;1;15;Melampyrum pratense;;;C
+Häggeby;06/08/2019;2;S;1;15;Campanula rotundifolia;;;C
+Häggeby;06/08/2019;2;N;4;26;Acinos arvensis;;;C
+Häggeby;06/08/2019;2;N;5;0;;;;C
+Häggeby;06/08/2019;2;N;6;0;;;;C
+Hargshamn;07/08/2019;2;W;4;86;Galium album;;;C
+Hargshamn;07/08/2019;2;W;4;86;Achillea millefolium;;;C
+Hargshamn;07/08/2019;2;W;5;199;Vicia cracca;;;C
+Hargshamn;07/08/2019;2;W;5;199;Achillea millefolium;;;C
+Hargshamn;07/08/2019;2;W;5;199;Centaurea jacea;;;C
+Hargshamn;07/08/2019;2;W;6;283;Galium album;;;C
+Hargshamn;07/08/2019;2;W;6;283;Centaurea jacea;;;C
+Hargshamn;07/08/2019;2;E;1;1;Leontodon hispidus;;;C
+Hargshamn;07/08/2019;2;E;2;6;Achillea millefolium;;;C
+Hargshamn;07/08/2019;2;E;3;125;Knautia arvensis;;;C
+Hargshamn;07/08/2019;2;E;3;125;Achillea millefolium;;;C
+Hargshamn;07/08/2019;2;E;3;125;Centaurea jacea;;;C
+Enköping;08/08/2019;2;W;4;180;Centaurea jacea;;;C
+Enköping;08/08/2019;2;W;4;180;Galium album;;;C
+Enköping;08/08/2019;2;W;4;180;Scorzoneroides autumnalis;;;C
+Enköping;08/08/2019;2;W;5;75;Galium album;;;C
+Enköping;08/08/2019;2;W;5;75;Hypericum maculatum;;;C
+Enköping;08/08/2019;2;W;6;5;Scorzoneroides autumnalis;;;C
+Enköping;08/08/2019;2;W;6;5;Hypericum perforatum;;;C
+Enköping;08/08/2019;2;E;1;176;Achillea millefolium;;;C
+Enköping;08/08/2019;2;E;1;176;Convolvulus arvensis;;;C
+Enköping;08/08/2019;2;E;1;176;Galium album;;;C
+Enköping;08/08/2019;2;E;2;443;Convolvulus arvensis;;;C
+Enköping;08/08/2019;2;E;2;443;Galium album;;;C
+Enköping;08/08/2019;2;E;2;443;Achillea millefolium;;;C
+Enköping;08/08/2019;2;E;3;243;Galium album;;;C
+Enköping;08/08/2019;2;E;3;243;Achillea millefolium;;;C
+Enköping;08/08/2019;2;E;3;243;Convolvulus arvensis;;;C
+Enköping;08/08/2019;2;E;3;243;Potentilla argentea;;;C
+Gottröra;09/08/2019;2;S;1;8;Achillea millefolium;;;C
+Gottröra;09/08/2019;2;S;2;0;;;;C
+Gottröra;09/08/2019;2;S;3;56;Centaurea jacea;;;C
+Gottröra;09/08/2019;2;S;3;56;Achillea millefolium;;;C
+Gottröra;09/08/2019;2;S;3;56;Vicia tetrasperma;;;C
+Gottröra;09/08/2019;2;N;4;7;Scorzoneroides autumnalis;;;C
+Gottröra;09/08/2019;2;N;5;0;;;;C
+Gottröra;09/08/2019;2;N;6;53;Centaurea jacea;;;C
+Gottröra;09/08/2019;2;N;6;53;Lotus corniculatus;;;C
+Gottröra;09/08/2019;2;N;6;53;Hieracium canadense;;;C
+Rimbo;09/08/2019;2;N;4;11;Hieracium pilosella;;;C
+Rimbo;09/08/2019;2;N;4;11;Galium album;;;C
+Rimbo;09/08/2019;2;N;5;85;Galium album;;;C
+Rimbo;09/08/2019;2;N;6;0;;;;C
+Rimbo;09/08/2019;2;S;1;92;Vicia cracca;;;C
+Rimbo;09/08/2019;2;S;1;92;Calluna vulgaris;;;C
+Rimbo;09/08/2019;2;S;2;0;;;;C
+Rimbo;09/08/2019;2;S;3;0;;;;C
+Sigtuna;13/08/2019;2;N;5;0;;;;C
+Sigtuna;13/08/2019;2;N;6;64;Achillea millefolium;;;C
+Sigtuna;13/08/2019;2;N;6;64;Lotus corniculatus;;;C
+Sigtuna;13/08/2019;2;N;4;72;Campanula rotundifolia;;;C
+Sigtuna;13/08/2019;2;N;4;72;Achillea millefolium;;;C
+Sigtuna;13/08/2019;2;N;4;72;Dianthus deltoides;;;C
+Sigtuna;13/08/2019;2;N;4;72;Linaria vulgaris;;;C
+Sigtuna;13/08/2019;2;N;4;72;Hypericum perforatum;;;C
+Sigtuna;13/08/2019;2;S;1;5;Potentilla argentea;;;C
+Sigtuna;13/08/2019;2;S;1;5;Galium verum;;;C
+Sigtuna;13/08/2019;2;S;2;1;Trifolium pratense;;;C
+Sigtuna;13/08/2019;2;S;3;0;;;;C

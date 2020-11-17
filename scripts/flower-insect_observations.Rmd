@@ -1,0 +1,130 @@
+---
+title: "Flower-insect_abundance"
+author: "Juliana Dániel Ferreira"
+date: "13 november 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+#rm(list=ls())
+library(here)
+library(tidyverse)
+library(vegan)
+library(lattice)
+library(ggpubr)
+library(car)
+library(psych)
+library(lme4)
+library(glmulti)
+library(visreg)
+library(MASS)
+library(corrplot)
+library(DHARMa)
+```
+
+## Describe script here
+
+```{r load data, echo=FALSE}
+movement.data <- read.csv2(here("data", "Fluorescent dye data 2019.csv" ))
+rutor <- read.csv2(here("data", "Provrutor_plants.csv"))
+roadverge <- read.csv2(here("data", "Roadside_colour.csv"))
+width.data <- read.csv2(here("data", "Road_verge_width.csv"))
+```
+
+```{r Check the data, echo=FALSE}
+str(movement.data)
+mov.freq <- movement.data %>% 
+  mutate(Site = as.factor(Site)) %>% 
+  mutate(Road.verge = as.factor(Road.verge)) %>% 
+  mutate(Side = as.factor(Side)) %>% 
+  mutate(Side.colour = as.factor(Side.colour)) %>% 
+  mutate(Insect.abundance.log = log10(Insect.abundance + 1))
+str(mov.freq)
+
+str(rutor)  
+plants <- rutor %>% 
+  mutate(Site = as.factor(Site)) %>% 
+  mutate(Side = as.factor(Side)) %>% 
+  mutate(Visit = as.factor(Visit)) %>% 
+  mutate(Cut = as.factor(Cut))  
+str(plants) 
+
+str(roadverge)
+side.metadata <- roadverge %>%
+  mutate(Site = as.factor(Site)) %>% 
+  mutate(Side = as.factor(Side)) %>% 
+  mutate(Colour = as.factor(Colour))
+str(side.metadata)
+
+str(width.data)
+
+```
+
+```{r Summarize plant data}
+# Create data frame with number of flowers in each side of the road per site
+# For visit 1:
+flowers.0 <- plants %>% 
+  filter(Visit %in% "1") %>% 
+  group_by(Site, Side, Quadrant.no.) %>% 
+  summarise(Flower.abund = sum(Number.of.flower.heads)/n())
+flowers.0
+
+flower.roadside <- flowers.0 %>% 
+  group_by(Site, Side) %>% 
+  summarise(Flower.abund = sum(Flower.abund))
+flower.roadside
+
+flowers <- left_join(flower.roadside, side.metadata, by= c("Site", "Side"))
+head(flowers)
+
+```
+
+```{r Join with movement data and check correlations}
+
+db <- left_join(mov.freq, flowers, by= c("Site", "Side"))
+
+# Extract data per site
+site.insect <- db %>%
+  group_by(Site, Side, Road.verge) %>% 
+  summarise(Insect.abund.0 = sum(Insect.abundance.log)/n()) %>% 
+  group_by(Site, Road.verge) %>% 
+  summarise(Insect.abund = sum(Insect.abund.0))  
+site.insect
+
+site.flower <- db %>% 
+  group_by(Site, Side, Road.verge) %>% 
+  summarise(Flower.abund.0 = sum(Flower.abund)/n()) %>% 
+  group_by(Site, Road.verge) %>% 
+  summarise(Flower.rich = sum(Flower.abund.0))
+site.flower
+
+# Extract road verge width
+side.metadata
+
+# Is the flower abundance different between site categories?
+sr.sp.flower <- aov(Flower.rich ~ Road.verge, data = site.flower)
+summary(sr.sp.flower) # yes
+plot(sr.sp.flower)
+# plot:
+visreg(sr.sp.flower)
+
+# Is the insect abundance different between site categories?
+sr.sp.insect <- aov(Insect.abund ~ Road.verge, data = site.insect)
+summary(sr.sp.insect) # no
+plot(sr.sp.insect)
+# plot:
+visreg(sr.sp.insect)
+
+
+
+
+site.flower.insect <- left_join(site.flower, site.insect, by="Site")
+
+site.corr <- site.flower.insect[, 2:3]
+corr <- cor.mtest(site.corr, conf.level=.95)
+corrplot(cor(site.corr), p.mat = corr$p, insig = "p-value", mar=c(0,0,1,0))
+
+
+
+```
+

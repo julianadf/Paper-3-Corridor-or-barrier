@@ -1,0 +1,201 @@
+Site;Vägens sida;Width;Neighboring habitat;Notes;Svensk;Observer
+Aspö;W;3,3;Pasture;Oklar gräns. Till staketet.;bete;J
+Aspö;E;4,1;Restaurerbar;;;J
+Aspö;W;6;Pasture;Oklar gräns. Till staketet.;bete;J
+Aspö;E;4;Restaurerbar;;;J
+Aspö;W;4,1;Pasture;;bete;J
+Aspö;E;3,8;Arable land;;åker;J
+Aspö;W;10;Arable land;;vall;J
+Aspö;E;10;Arable land;;gräsmark;J
+Aspö;W;3,7;Arable land;;åker;J
+Aspö;E;4,8;Arable land;;åker;J
+Björklinge;N;2,8;Arable land;;åker;J
+Björklinge;S;3;Arable land;;åker;J
+Björklinge;N;2,9;Arable land;;åker;J
+Björklinge;S;2,9;Arable land;;åker;J
+Björklinge;N;2,6;Arable land;;åker;J
+Björklinge;S;2,8;Arable land;;åker;J
+Björklinge;N;2,2;Arable land;;åker;J
+Björklinge;S;3;Arable land;;åker;J
+Björklinge;N;3,8;Pasture;Horse;bete;J
+Björklinge;S;2,8;Pasture;;bete;J
+Enköping;E;5,6;Pasture;;hage;J
+Enköping;W;3,6;Arable land;;vall;J
+Enköping;E;3,9;Arable land;;åker;J
+Enköping;W;4,3;Arable land;;åker;J
+Enköping;E;4,2;Arable land;;åker;J
+Enköping;W;4,5;Arable land;;åker;J
+Enköping;E;4,1;Arable land;;åker;J
+Enköping;W;3,3;Arable land;;åker;J
+Enköping;E;5;Arable land;;vall;J
+Enköping;W;4,4;Arable land;;åker;J
+Hargshamn;S;4,9;Forest;;;J
+Hargshamn;S;3,5;Forest;;;J
+Hargshamn;S;3;Pasture;Oklar. Till staketet.;bete;J
+Hargshamn;S;2,6;Arable land;;åker;J
+Hargshamn;S;4,4;Pasture;Oklar. Till staketet.;bete;J
+Hargshamn;N;4,8;Forest;;;J
+Hargshamn;N;4,1;Forest;;;J
+Hargshamn;N;3,5;Forest;;;J
+Hargshamn;N;6,8;Forest;;;J
+Hargshamn;N;4,1;Forest;;;J
+Rovsättra;E;1,8;Pasture;Oklar. Till staketet.;bete;J
+Rovsättra;W;4,8;Forest;;;J
+Rovsättra;E;2,3;Pasture;Oklar. Till staketet.;bete;J
+Rovsättra;W;2,9;Arable land;Oklar gräns, där vall är jättefin;vall;J
+Rovsättra;E;2,2;Forest;;;J
+Rovsättra;W;2,6;Forest;;;J
+Rovsättra;E;2,6;Forest;;;J
+Rovsättra;W;10;Forest;5 m klippt;;J
+Rovsättra;E;4;Forest;;;J
+Rovsättra;W;10;Forest;5 m klippt;;J
+Skogstibble;N;4,2;Forest;;;J
+Skogstibble;N;3,9;Pasture;;bete;J
+Skogstibble;N;4,5;Arable land;;åker;J
+Skogstibble;N;3,6;Arable land;;åker;J
+Skogstibble;N;5;Arable land;;åker;J
+Skogstibble;S;3,1;Arable land;;åker;J
+Skogstibble;S;3,4;Trench;;;J
+Skogstibble;S;5;Arable land;;åker;J
+Skogstibble;S;3;Arable land;;åker;J
+Skogstibble;S;4,1;Arable land;;åker;J
+Skutskär;E;4,9;Forest;;;J
+Skutskär;W;2,4;Forest;;;J
+Skutskär;E;5,9;Arable land;Liten gräsmark, oklar gräns. Mät där klippning slutar.;gräsmark;J
+Skutskär;W;4,6;Forest;;;J
+Skutskär;E;4,1;Forest;;;J
+Skutskär;W;3,2;Garden;;;J
+Skutskär;E;3,6;Pasture;;hage;J
+Skutskär;W;5,5;Forest;;;J
+Skutskär;E;4,2;Forest;;;J
+Skutskär;W;4,7;Forest;;;J
+Skärplinge;E;3,8;Forest;;;J
+Skärplinge;W;4;Forest;;;J
+Skärplinge;E;4,1;Arable land;Oklar gräns. Mät där skötsel ändras (klippt).;gräsmark;J
+Skärplinge;W;3,7;Arable land;Oklar gräns. Mät där skötsel ändras (klippt).;gräsmark;J
+Skärplinge;E;4,3;Arable land;Oklar gräns. Mät där skötsel ändras (klippt).;gräsmark;J
+Skärplinge;W;4,1;Arable land;Oklar gräns. Mät där skötsel ändras (klippt).;gräsmark;J
+Skärplinge;E;2,8;Garden;;;J
+Skärplinge;W;3;Forest - Arable land;;vall;J
+Skärplinge;E;4,1;Forest;;;J
+Skärplinge;W;4,1;Arable land;;vall;J
+Strängnäs;E;3,6;Arable land;;åker;J
+Strängnäs;W;3,1;Arable land;;åker;J
+Strängnäs;E;2,8;Arable land;;åker;J
+Strängnäs;W;4;Arable land;;åker;J
+Strängnäs;E;6,1;Pasture;Oklar gräns. Till staketet.;bete;J
+Strängnäs;W;10;Forest - Arable land;;åker;J
+Strängnäs;E;4,7;Pasture;Oklar gräns. Till staketet.;bete;J
+Strängnäs;W;2,8;Forest - Arable land;;vall;J
+Strängnäs;E;4,5;Pasture;Oklar gräns. Till staketet.;bete;J
+Strängnäs;W;2,7;Arable land;;vall;J
+Tierp;N;2,6;Pasture;Oklar gräns. Till staketet.;bete;J
+Tierp;S;2,8;Forest;;;J
+Tierp;N;2,9;Pasture;Oklar gräns. Till staketet.;bete;J
+Tierp;S;2,4;Pasture;Oklar gräns. Till staketet.;bete;J
+Tierp;N;3,4;? - Arable land;;åker;J
+Tierp;S;3,4;Forest;;;J
+Tierp;N;3,3;Forest;;;J
+Tierp;S;3,7;Forest;;;J
+Tierp;N;4;Forest;;;J
+Tierp;S;2,5;Forest - House;;;J
+Tosterön;W;5,1;Forest;;;J
+Tosterön;E;3,4;Pasture;;hage;J
+Tosterön;W;3,2;Arable land;;vall;J
+Tosterön;E;2,9;Pasture;Oklar gräns. Till staketet.;bete;J
+Tosterön;W;2,3;Clearing;;;J
+Tosterön;E;4,8;Pasture;Oklar gräns. Till staketet.;bete;J
+Tosterön;W;3,8;Forest;;;J
+Tosterön;E;6;Arable land;;gräsmark;J
+Tosterön;W;4,6;Forest;;;J
+Tosterön;E;4,6;Arable land;;gräsmark;J
+Upplands-Väsby;W;3,7;Arable land;;åker;J
+Upplands-Väsby;E;4,6;Forest;;;J
+Upplands-Väsby;W;5;Arable land;;åker;J
+Upplands-Väsby;E;5;Forest;;;J
+Upplands-Väsby;W;6;Arable land;;åker;J
+Upplands-Väsby;E;4,5;Forest;;;J
+Upplands-Väsby;W;4,5;Arable land;;åker;J
+Upplands-Väsby;E;5;Forest;;;J
+Upplands-Väsby;W;5;Forest;;;J
+Upplands-Väsby;E;4,3;Pasture;Oklar gräns. Till staketet.;hage;J
+Vänge;E;4,2;Arable land;;åker;J
+Vänge;E;4,1;Arable land;;åker;J
+Vänge;E;3,1;Arable land;;åker;J
+Vänge;E;3,2;Arable land;;åker;J
+Vänge;E;6,6;Arable land;;åker;J
+Vänge;W;4,2;Arable land;;åker;J
+Vänge;W;3,1;Arable land;;åker;J
+Vänge;W;3,4;Garden;;;J
+Vänge;W;4,9;Arable land;;åker;J
+Vänge;W;4,7;Pasture;Oklar.;bete;J
+Östhammar;W;2,9;Pasture;Oklar. Till staketet.;bete;J
+Östhammar;E;4,8;Forest;;;J
+Östhammar;W;3,1;Pasture;Oklar. Till staketet.;bete;J
+Östhammar;E;2,2;Arable land;;åker;J
+Östhammar;W;4,7;Forest - Pasture;;skog - bete;J
+Östhammar;E;4;Forest;;;J
+Östhammar;W;4,1;Forest;;;J
+Östhammar;E;2,7;Forest;;;J
+Östhammar;W;4,1;Forest;;;J
+Östhammar;E;2,9;Forest;;;J
+Sigtuna;N;4,76;Pasture;Hästhage;;C
+Sigtuna;N;4,6;Arable land;;;C
+Sigtuna;N;5,25;Forest;;;C
+Sigtuna;N;5,7;Forest;;;C
+Sigtuna;N;6,2;Meadow;;;C
+Sigtuna;S;7,35;Forest;;;C
+Sigtuna;S;3,5;Bushes;;;C
+Sigtuna;S;3,35;Bushes;;;C
+Sigtuna;S;7,5;Bushes;;;C
+Sigtuna;S;4,1;Trees;;;C
+Häggeby;S;3,6;Enclosure;;;C
+Häggeby;S;2,7;Enclosure;;;C
+Häggeby;S;5,75;Bushes;;;C
+Häggeby;S;8,25;Trees;;;C
+Häggeby;S;4,6;Forest;;;C
+Häggeby;N;5,8;Enclosure;;;C
+Häggeby;N;2,85;Enclosure;;;C
+Häggeby;N;5,25;Forest;;;C
+Häggeby;N;3,9;Forest;;;C
+Häggeby;N;3,95;Forest;;;C
+Arlanda;E;5,1;Forest;;;C
+Arlanda;E;4,45;Bushes;;;C
+Arlanda;E;5,4;Meadow;;;C
+Arlanda;E;4,8;Forest;;;C
+Arlanda;E;4,6;Forest;;;C
+Arlanda;W;7;Pasture;;;C
+Arlanda;W;6,85;Pasture;;;C
+Arlanda;W;6,5;Meadow;;;C
+Arlanda;W;4,85;Trees;;;C
+Arlanda;W;4,55;Forest;;;C
+Gottröra;N;7,8;Pasture;;;C
+Gottröra;N;4,1;Meadow;;;C
+Gottröra;N;6,3;Arable land;;;C
+Gottröra;N;3,6;Arable land;;;C
+Gottröra;N;3;Arable land;;;C
+Gottröra;S;3,4;Forest;;;C
+Gottröra;S;4,2;Arable land;;;C
+Gottröra;S;4;Arable land;;;C
+Gottröra;S;4,9;Arable land;;;C
+Gottröra;S;2,7;Arable land;;;C
+Rimbo;N;3,8;Bushes;;;C
+Rimbo;N;9,1;Bushes;;;C
+Rimbo;N;11,1;Pasture;;;C
+Rimbo;N;2,7;Bushes;;;C
+Rimbo;N;1,95;Forest;;;C
+Rimbo;S;8,8;Forest;;;C
+Rimbo;S;4;Trees;;;C
+Rimbo;S;3,75;Pasture;;;C
+Rimbo;S;2,7;Bushes;;;C
+Rimbo;S;4;Pasture;;;C
+Knutby;W;1;Arable land;;;C
+Knutby;W;4,45;Forest;;;C
+Knutby;W;3,6;Clear cut;;;C
+Knutby;W;3,95;Clear cut;;;C
+Knutby;W;4,55;Ley;;;C
+Knutby;E;5,7;Trees;;;C
+Knutby;E;4,6;Forest;;;C
+Knutby;E;3,9;Clear cut;;;C
+Knutby;E;6,1;Clear cut;;;C
+Knutby;E;7,15;Ley;;;C
