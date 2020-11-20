@@ -1,0 +1,97 @@
+---
+title: "Movement along and across"
+author: "Juliana Dániel Ferreira"
+date: "19 november 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# rm(list=ls())
+library(here)
+library(tidyverse)
+library(vegan)
+library(lattice)
+library(ggpubr)
+library(car)
+library(psych)
+library(lme4)
+library(glmulti)
+library(visreg)
+library(MASS)
+library(corrplot)
+library(DHARMa)
+```
+
+
+```{r Load data}
+movement.data <- read.csv2(here("data", "Fluorescent dye data 2019.csv" ))
+rutor <- read.csv2(here("data", "Provrutor_plants.csv"))
+roadverge <- read.csv2(here("data", "Roadside_colour.csv"))
+width.data <- read.csv2(here("data", "Road_verge_width.csv"))
+```
+
+
+
+```{r Check data, `echo = FALSE`}
+str(movement.data)
+hist(movement.data$Insect.abundance) # need to transform in the model
+
+
+movement <- movement.data %>% 
+  mutate(Site = as.factor(Site)) %>% 
+  mutate(Road.verge = as.factor(Road.verge)) %>% 
+  mutate(Side.colour = as.factor(Side.colour)) %>% 
+  rename(trials= Total.no..of.flowers) %>% 
+  rename(successes.blue= Number.of.blue.marked) %>% 
+  rename(successes.red= Number.of.red.marked) %>% 
+  mutate(failures.red = trials - successes.red) %>% 
+  mutate(failures.blue = trials - successes.blue) %>% 
+  rename(dist.to.blue = Distance.to.1A..m.) %>% 
+  rename(dist.to.red = Distance.to..1B..m.) %>% 
+  mutate(blue.side = ifelse(Side.colour == "A", 1, 0)) %>% 
+  mutate(blue.side = as.factor(blue.side)) %>% 
+  mutate(red.side = ifelse(Side.colour == "B", 1, 0)) %>% 
+  mutate(red.side = as.factor(red.side)) %>% 
+  mutate(direction.red = ifelse(Side.colour =="C", "y", "x")) %>% 
+  mutate(direction.red = as.factor(direction.red))
+str(movement)
+
+```
+
+```{r Run model for red side}
+
+mod.red <- glm(formula = cbind(successes.red, failures.red) ~ Road.verge + Traffic.int + dist.to.red + red.side +
+                  direction.red + log10(Insect.abundance+1) + Side.colour,
+               family = "binomial", data = movement)
+summary(mod.red)
+visreg(mod.red, scale="response")
+
+
+mod.blue <- glm(formula = cbind(successes.blue, failures.blue) ~ Road.verge + Traffic.int + dist.to.blue + blue.side +
+                  direction.red + log10(Insect.abundance+1) + Side.colour,
+               family = "binomial", data = movement)
+summary(mod.blue)
+visreg(mod.blue, scale="response")
+```
+```{r}
+str(movement)
+movement.prop <- movement %>% 
+  mutate(prop.flower.red = successes.red/trials) %>% 
+  mutate(prop.flower.blue = successes.blue/trials)
+str(movement.prop)
+
+mod.red <- glm(formula = prop.flower.red ~ Road.verge + Traffic.int + dist.to.red + red.side +
+                  direction.red + log10(Insect.abundance+1) + Side.colour,
+               family = "quasibinomial", data = movement.prop)
+summary(mod.red)
+visreg(mod.red, scale="response")
+
+
+mod.blue <- glm(formula = prop.flower.blue ~ Road.verge + Traffic.int + dist.to.blue + blue.side +
+                  direction.red + log10(Insect.abundance+1) + Side.colour,
+               family = "quasibinomial", data = movement.prop)
+summary(mod.blue)
+visreg(mod.blue, scale="response")
+
+```
+

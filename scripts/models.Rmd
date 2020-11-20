@@ -1,0 +1,31 @@
+---
+title: "Models"
+author: "Juliana Dániel Ferreira"
+date: "20 november 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+# Model 1: This model tests whether there are differences in the direction of movements
+# Data: data mod1
+# successes: Number marked, failures: Total no. of flowers - number marked
+
+direction.mod <- glm(formula = cbind(successes, failures)) ~ Same side + Direction + Distance to marked + Number of flowers)
+
+# Model 2: 
+# Total across: select only observations where the marked flower was on the opposite side of the road (Same side=N), exclude group C??
+across <- glm(formula = cbind(successes, failures) ~ Road.verge * Traffic.int + Distance to marked + log10(Insect.abundance+1),
+               family = "binomial", data = data models)
+
+# Total along: select only observations where the marked flower was on the same side of the road (Same side=Y), exclude group C??
+along <- glm(formula = cbind(successes, failures) ~ Road.verge * Traffic.int + Distance to marked + log10(Insect.abundance+1),
+               family = "binomial", data = data models)
+
+# Total into the neighbouring: select only observations where the marked flower was on the same side of the road (Same side=Y)
+neighb <- glm(formula = cbind(successes, failures) ~ Road.verge * Traffic.int + Distance to marked + log10(Insect.abundance+1),
+               family = "binomial", data = data models)
+
+
+
+```
+

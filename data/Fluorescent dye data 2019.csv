@@ -1,4 +1,4 @@
-Site;Road width (m);Road verge;Traffic (vehicles/day);Group;Side;Total no. of flowers;Number of blue marked;Number of red marked;Number of unmarked;Marked with both;Distance to 1A (m);Distance to  1B (m);Side.colour;Insect abundance
+Site;Road width (m);Road verge;Traffic.int;Group;Side;Total no. of flowers;Number of blue marked;Number of red marked;Number of unmarked;Marked with both;Distance to 1A (m);Distance to  1B (m);Side.colour;Insect abundance
 Arlanda;6;SR;829;3A;W;33;24;1;9;1;24;24,74;A;5
 Arlanda;6;SR;829;2A;W;31;25;0;6;0;12;13,416;A;5
 Arlanda;6;SR;829;3B;E;29;2;12;16;1;24,74;24;B;4

@@ -33,6 +33,7 @@ width.data <- read.csv2(here("data", "Road_verge_width.csv"))
 
 ```{r Check the data, echo=FALSE}
 str(movement.data)
+hist(movement.data$Insect.abundance) # skewed. need to log
 mov.freq <- movement.data %>% 
   mutate(Site = as.factor(Site)) %>% 
   mutate(Road.verge = as.factor(Road.verge)) %>% 
@@ -40,6 +41,7 @@ mov.freq <- movement.data %>%
   mutate(Side.colour = as.factor(Side.colour)) %>% 
   mutate(Insect.abundance.log = log10(Insect.abundance + 1))
 str(mov.freq)
+hist(mov.freq$Insect.abundance.log) # better
 
 str(rutor)  
 plants <- rutor %>% 
@@ -57,6 +59,12 @@ side.metadata <- roadverge %>%
 str(side.metadata)
 
 str(width.data)
+rv.width <- width.data %>% 
+  mutate(Site = as.factor(Site)) %>% 
+  mutate(Side = as.factor(Side)) %>% 
+  group_by(Site, Side) %>% 
+  summarise(mean.width.side = sum(Width)/n())
+rv.width
 
 ```
 
@@ -74,12 +82,121 @@ flower.roadside <- flowers.0 %>%
   summarise(Flower.abund = sum(Flower.abund))
 flower.roadside
 
+gg.flowerside <- ggplot(flowers.0, aes(x = Site, y = Flower.abund)) + 
+  geom_boxplot(aes(fill=Side)) + labs(x="Site", y="Number of flowers") 
+
+
 flowers <- left_join(flower.roadside, side.metadata, by= c("Site", "Side"))
 head(flowers)
+hist(flowers$Flower.abund) # skewed
+flowers$Flower.abund.sr <- sqrt(flowers$Flower.abund)
+hist(flowers$Flower.abund.sr)
+```
+```{r Create database with 2 observations/site: side of the road}
+db <- left_join(mov.freq, flowers, by= c("Site", "Side"))
+
+# Extract data per site
+site.side.insect <- db %>%
+  group_by(Site, Side, Road.verge, Traffic.int) %>% 
+  summarise(Insect.abund.log = sum(Insect.abundance.log)/n()) 
+site.side.insect
+
+site.side.flower <- db %>% 
+  group_by(Site, Side, Road.verge) %>% 
+  summarise(Flower.abund.sr = sum(Flower.abund.sr)/n()) 
+site.side.flower
+
+db.side.0 <- left_join(site.side.insect, site.side.flower, by =c("Site", "Side", "Road.verge"))
+
+# Extract road verge width (per site) and join with the database
+db.side <- left_join(db.side.0 , rv.width, by=c("Site", "Side"))
+
+
 
 ```
 
-```{r Join with movement data and check correlations}
+```{r }
+
+# Extract data per site
+site.insect <- db %>%
+  group_by(Site, Side, Road.verge) %>% 
+  summarise(Insect.abund.0 = sum(Insect.abundance.log)/n()) %>% 
+  group_by(Site, Road.verge) %>% 
+  summarise(Insect.abund = sum(Insect.abund.0))  
+site.insect
+
+site.flower <- db %>% 
+  group_by(Site, Side, Road.verge) %>% 
+  summarise(Flower.abund.0 = sum(Flower.abund)/n()) %>% 
+  group_by(Site, Road.verge) %>% 
+  summarise(Flower.rich = sum(Flower.abund.0))
+site.flower
+
+test <- left_join(site.insect, site.flower)
+test$Flower.trans <- sqrt(test$Flower.rich) 
+ggscatter(test, x="Flower.trans", y="Insect.abund", add = "reg.line", conf.int = TRUE, 
+          cor.coef = TRUE, cor.method = "pearson",
+          xlab = "Number of flowers in the road verge", ylab = "Insect abundance")
+
+# Extract road verge width (per site) and join with the database
+hist(rv.width$mean.width.side) # looks ok
+rv.width.site <- rv.width %>% 
+  group_by(Site) %>% 
+  summarise(site.width = sum(mean.width.side)/n())
+rv.width.site  
+
+width.site.type <- left_join(site.flower, rv.width.site, by="Site")
+
+# Is the road verge width different between sp poor and sp rich?
+rv.sitecat <- aov(site.width ~ Road.verge, data = width.site.type)
+summary(rv.sitecat) # no
+plot(rv.sitecat)
+# plot:
+visreg(rv.sitecat, ylab= "Mean road verge width (m)", xlab="Road verge quality")
+
+# Is the road verge width different between site type?
+rv.sitecat <- aov(site.width ~ Road.verge, data = width.site.type)
+summary(rv.sitecat) # yes
+plot(rv.sitecat)
+# plot:
+visreg(rv.sitecat)
+
+
+# Is the flower abundance different between site categories?
+sr.sp.flower <- lm(Flower.rich ~ Road.verge, data = site.flower)
+summary(sr.sp.flower) # yes
+plot(sr.sp.flower)
+# plot:
+visreg(sr.sp.flower, ylab= "Number of flowers", xlab="Road verge quality")
+
+# Is the flower abundance changing with traffic?
+ggscatter(site.db, x="traffic", y="Flower.rich", add = "reg.line", conf.int = TRUE, 
+          cor.coef = TRUE, cor.method = "pearson",
+          xlab = "Traffic intensity", ylab = "Number of flowers")
+
+# Is the insect abundance different between site categories?
+sr.sp.insect <- aov(Insect.abund ~ Road.verge, data = site.insect)
+summary(sr.sp.insect) # no
+plot(sr.sp.insect)
+# plot:
+visreg(sr.sp.insect, ylab= "log (insect abundance)", xlab="Road verge quality")
+
+# Is the road verge width changing with traffic intensity?
+traffic.site <- db.side %>% group_by(Site) %>% summarise(traffic= sum(Traffic.int)/n())
+
+site.db <- left_join(width.site.type, traffic.site, by="Site")
+
+ggscatter(site.db, x="site.width", y="traffic", add = "reg.line", conf.int = TRUE, 
+          cor.coef = TRUE, cor.method = "pearson",
+          xlab = "Mean road verge width/site", ylab = "Traffic intensity")
+
+
+cor(corr.traff.width$site.width, corr.traff.width$traffic)
+corr.t.wi <- cor.mtest(corr.traff.width, conf.level=.95)
+corrplot(cor(corr.traff.width), p.mat = corr$p, insig = "p-value", mar=c(0,0,1,0))
+```
+
+```{rJoin with movement data and check correlations}
 
 db <- left_join(mov.freq, flowers, by= c("Site", "Side"))
 
@@ -98,8 +215,21 @@ site.flower <- db %>%
   summarise(Flower.rich = sum(Flower.abund.0))
 site.flower
 
-# Extract road verge width
-side.metadata
+# Extract road verge width (per site) and join with the database
+rv.width.site <- rv.width %>% 
+  group_by(Site) %>% 
+  summarise(site.width = sum(mean.width.side)/n())
+rv.width.site  
+
+width.site.type <- left_join(site.flower, rv.width.site, by="Site")
+
+# Is the road verge width different between site type?
+rv.sitecat <- aov(site.width ~ Road.verge, data = width.site.type)
+summary(rv.sitecat) # yes
+plot(rv.sitecat)
+# plot:
+visreg(rv.sitecat)
+
 
 # Is the flower abundance different between site categories?
 sr.sp.flower <- aov(Flower.rich ~ Road.verge, data = site.flower)

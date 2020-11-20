@@ -1,0 +1,35 @@
+movement.data <- read.csv2(here("data", "Fluorescent dye data 2019.csv" ))
+rutor <- read.csv2(here("data", "Provrutor_plants.csv"))
+roadverge <- read.csv2(here("data", "Roadside_colour.csv"))
+width.data <- read.csv2(here("data", "Road_verge_width.csv"))
+
+str(movement.data)
+hist(movement.data$Insect.abundance) # need to transform in the model
+
+mov.freq <- movement.data %>% 
+  mutate(Site = as.factor(Site)) %>% 
+  mutate(Road.verge = as.factor(Road.verge)) %>% 
+  mutate(Side = as.factor(Side)) %>% 
+  mutate(Side.colour = as.factor(Side.colour)) %>% 
+  rename(trials= Total.no..of.flowers) %>% 
+  rename(successes.blue= Number.of.blue.marked) %>% 
+  rename(successes.red= Number.of.red.marked) %>% 
+  mutate(failures.red = trials - successes.red) %>% 
+  rename(dist.to.blue = Distance.to.1A..m.) %>% 
+  rename(dist.to.red = Distance.to..1B..m.) %>% 
+  mutate(direction.red = ifelse(Side.colour == "B", "x", "y")) %>% 
+  mutate(direction.red = as.factor(direction.red)) %>% 
+  mutate(blue.side = ifelse(Side.colour == "A", 1, 0)) %>% 
+  mutate(blue.side = as.factor(blue.side)) %>% 
+  
+  mov.freq <- movement.data %>% 
+  mutate(Site = as.factor(Site)) %>% 
+  mutate(Road.verge = as.factor(Road.verge)) %>% 
+  mutate(Side = as.factor(Side)) %>% 
+  mutate(Side.colour = as.factor(Side.colour)) %>%
+  rename(dist.to.blue = Distance.to.1A..m.) %>% 
+  mutate(prop.blue = Number.of.blue.marked/Total.no..of.flowers) %>% 
+  mutate(same.side = ifelse(Side.colour=="A", 1, 0)) %>% # 1: same side (didn't cross)
+  mutate(direction = ifelse(Side.colour == "A", "x", "y")) %>% 
+  mutate(direction = as.factor(direction))
+str(mov.freq)

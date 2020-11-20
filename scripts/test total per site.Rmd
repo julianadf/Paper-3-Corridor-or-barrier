@@ -1,0 +1,38 @@
+---
+title: "Along and across"
+author: "Juliana Dániel Ferreira"
+date: "19 november 2020"
+output: html_document
+---
+
+```{r setup}
+movement.data <- read.csv2(here("data", "test2.csv" ))
+
+```
+
+
+```{r check data}
+str(movement.data)
+hist(movement.data$Insect.abundance) # skewed. need to log
+mov.freq.tot <- movement.data %>% 
+  mutate(Road.verge = as.factor(Road.verge)) %>% 
+  rename(distance.across = Distance.to.marked..across.) %>% 
+  rename(distance.along = Distance.to.marked..along.)
+str(mov.freq.tot)
+```
+
+
+```{r movements across}
+across <- glm(formula = Total.across ~ Road.verge * Traffic.int + distance.across + log10(Insect.abundance+1),
+               family = "quasibinomial", data = mov.freq.tot)
+summary(across)
+visreg(across, scale="response")
+
+along <- glm(formula = Total.along ~ Road.verge * Traffic.int + distance.along + log10(Insect.abundance+1),
+               family = "quasibinomial", data = mov.freq.tot)
+summary(along)
+visreg(along, scale="response")
+
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
