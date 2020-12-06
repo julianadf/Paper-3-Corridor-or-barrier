@@ -22,7 +22,7 @@ library(corrplot)
 library(DHARMa)
 ```
 
-## Describe script here
+
 
 ```{r load data, echo=FALSE}
 movement.data <- read.csv2(here("data", "Fluorescent dye data 2019.csv" ))

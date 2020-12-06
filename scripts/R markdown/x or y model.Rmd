@@ -1,0 +1,130 @@
+---
+title: 'Along or across?'
+output: html_document
+---
+```{r load packages, include=FALSE}
+#rm(list=ls())
+library(here)
+library(tidyverse)
+library(vegan)
+library(lattice)
+library(ggpubr)
+library(lme4)
+library(DHARMa)
+library(interactions)
+library(jtools)
+library(emmeans)
+library(visreg)
+```
+
+
+```{r load data, include=FALSE}
+direction.0 <- read.csv2(here("data", "database_models.csv" ))
+str(direction.0)
+direction <- direction.0 %>% 
+  mutate(Site = as.factor(Site)) %>% 
+  mutate(Road.verge = as.factor(Road.verge)) %>% 
+  rename(traffic = Traffic.int) %>% 
+  rename(trials = Total.no..of.flowers) %>% 
+  rename(successes = Number.marked) %>% 
+  mutate(Same.side = as.factor(Same.side)) %>% 
+  mutate(Direction = as.factor(Direction)) %>% 
+  rename(distance = Distance.to.marked..m.) %>%
+  rename(insects = Insect.abundance) %>% 
+  rename(flower.abund = Number.of.flowers) %>% 
+  mutate(failures = trials - successes) %>% 
+  mutate(obs = c(1:240))
+str(direction)
+```
+
+**Data exploration**
+_Step 1:_
+
+Check for outliers
+```{r, echo= FALSE}
+fig <- par(mfrow= c(2,2), mar = c(3,3,3,1))
+dotchart(direction$successes, main = "number of marked", group = direction$Road.verge)
+dotchart(direction$trials, main = "number of trials", group = direction$Road.verge)
+dotchart(direction$insects, main = "insect abundance/road verge", group = direction$Road.verge)
+dotchart(direction$flower.abund, main = "number flowers/road verge", group = direction$Road.verge)
+par(fig)
+
+```
+Cleveland plots for response and explanatory variables. Observations are grouped by road verge treatment (2 levels). One site (Skärplinge) seems to have a high number of insects. This variable will thus be log-transformed. Otherwise it looks as expected.
+
+_Step 2:_
+
+Check for collinearity
+
+```{r}
+# First, log-transform insect data:
+direction <- direction %>% 
+  mutate(insects = log10(insects+1))
+direction
+
+fig.2 <- cbind(direction$successes, direction$flower.abund, direction$insects, direction$traffic, direction$Road.verge)
+
+colnames(fig.2) <- c("successes", "flower.abund", "insects", "traffic", "RV")
+
+panel.cor <- function(x, y, digits=2, prefix="", cex.cor) 
+{
+    usr <- par("usr"); on.exit(par(usr)) 
+    par(usr = c(0, 1, 0, 1)) 
+    r <- abs(cor(x, y)) 
+    txt <- format(c(r, 0.123456789), digits=digits)[1] 
+    txt <- paste(prefix, txt, sep="") 
+    if(missing(cex.cor)) cex <- 0.8/strwidth(txt) 
+ 
+    test <- cor.test(x,y) 
+    # borrowed from printCoefmat
+    Signif <- symnum(test$p.value, corr = FALSE, na = FALSE, 
+                  cutpoints = c(0, 0.001, 0.01, 0.05, 0.1, 1),
+                  symbols = c("***", "**", "*", ".", " ")) 
+ 
+    text(0.5, 0.5, txt, cex = cex * r) 
+    text(.8, .8, Signif, cex=cex, col=2) 
+}
+pairs(fig.2, lower.panel=panel.smooth, upper.panel=panel.cor)
+```
+```{r}
+dat.tf <- within(direction,
+                 {
+                   gna <- interaction(Road.verge,traffic)
+                   gna <- reorder(gna, successes, mean)
+                   })
+print(bwplot(successes ~ gna, data=dat.tf, scales=list(x=list(rot=90)) ## rotate x-axis labels
+))
+
+grpVarL <- with(dat.tf, tapply(successes, list(gna), var) )
+summary(grpVar)
+```
+
+
+```{r}
+# This model tests whether there are differences in the direction of movements
+# successes: Number marked, failures: Total no. of flowers - number marked
+
+direction.mod <- glmer(formula = cbind(successes, failures) ~ Same.side * Direction + scale(distance) + scale(flower.abund) + (1 | Site) + (1 | obs), family = "binomial", data = direction)
+drop1(direction.mod, test = "Chi")
+
+summary(direction.mod)
+mod_dharma <- direction.mod %>% simulateResiduals(n=1000)
+plot(mod_dharma)#, quantreg = F) #the quantile regression didn't work so I supressed it
+plotResiduals(predict(direction.mod), mod_dharma$scaledResiduals)
+unique(predict(direction.mod))
+plotResiduals(mod_dharma, direction$Environment1, quantreg = F)
+testDispersion(mod_dharma)
+hist(mod_dharma)
+hist(resid(direction.mod))
+mod_dharma %>% testDispersion()
+mod_dharma %>% testZeroInflation()
+
+?glmer
+direction.crossed <- cat_plot(direction.mod, pred =Direction, modx =Same.side  ,  interval = TRUE, plot.points = FALSE,int.type = "confidence",geom ="line",vary.lty =TRUE)
+direction.crossed
+
+# Interaction effect based on the barrier effect (crossed or not)
+
+
+```
+

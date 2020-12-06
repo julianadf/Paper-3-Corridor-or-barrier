@@ -1,0 +1,126 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+```{r}
+library(interactions)
+library(jtools)
+```
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute codewithin the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Ctrl+Shift+Enter*. 
+
+```{r}
+delta <- read.csv2(here("data", "database_models.csv" ))
+str(delta)
+delta.flower <- delta %>% 
+  mutate(Site = as.factor(Site)) %>% 
+  mutate(Road.verge = as.factor(Road.verge)) %>% 
+  rename(trials = Total.no..of.flowers) %>% 
+  rename(successes = Number.marked) %>% 
+  mutate(Same.side = as.factor(Same.side)) %>% 
+  mutate(Direction = as.factor(Direction)) %>% 
+  rename(distance = Distance.to.marked..m.) %>% 
+  mutate(failures = trials - successes) 
+str(delta.flower)
+```
+The first model tests whether the movements across the road are influenced by the number of flowers in each side of the road (in the road verges). To do this, a new variable (delta.flower) was created. This variable contains two types of information:
+1. The direction of the movement. If the movement was from the highest flower abundance side to the lowest, the sign is negative (lowest - highest). If the movement was from the lowest side to the highest, the sign is positive (highest - lowest). Since there are 2 colours (one in each side of the road), sites have complementary data for each colour.
+2. The difference in number of flowers between the 2 road verges. The higher the value, the higher the difference. 
+
+Response variable: number of successes (number of marked flowers - total number of flowers per group)
+Explanatory variables: 
+1. delta flower (see above). Scaled
+2. distance from the unmarked group to the marked groups
+3. insect abundance in the corresponding side of the road (flower-visiting counts). Super-confusing, ask in meeting if confused. (logged)
+```{r}
+# Extract all movements across (except group C)
+db.across <- delta.flower %>% 
+  filter(., Same.side == "N") %>% 
+  filter(., !Group %in% c("1C", "2C")) %>% 
+  mutate(failures = trials - successes) %>% 
+  mutate(delta.flower = delta.flower) %>%   
+  mutate(insect.abundance = log10(Insect.abundance + 1))
+str(db.across)
+
+across <- glm(formula = cbind(successes, failures) ~ delta.flower + distance + Traffic.int+ insect.abundance, family = "binomial", data = db.across)
+summary(across)
+mod_dharma <- across %>% simulateResiduals(n=1000)
+plot(mod_dharma)
+mod_dharma %>% testDispersion()
+visreg(across, scale = "response")
+
+```
+
+
+
+```{r}
+across <- glm(formula = cbind(successes, failures) ~ delta.flower + distance + insect.abundance, family = "binomial", data = db.across)
+summary(across)
+visreg(across, scale = "response")
+
+```
+
+```{r}
+# Model 1: This model tests whether there are differences in the direction of movements
+# successes: Number marked, failures: Total no. of flowers - number marked
+direction.mod <- glmer(formula = cbind(successes, failures) ~ Same.side * Direction + scale(distance) + scale(Number.of.flowers) + (1 | Site), family = "binomial", data = delta.flower)
+summary(direction.mod)
+visreg(direction.mod, scale = "response")
+```
+
+```{r}
+# Total across: select only observations where the marked flower was on the opposite side of the road (Same side=N), exclude group C.
+db.across <- delta.flower %>% 
+  filter(., Same.side == "N") %>% 
+  filter(., !Group %in% c("1C", "2C")) %>% 
+  mutate(failures = trials - successes) %>% 
+  mutate(delt.flower = scale(delta.flower)) %>% 
+  mutate(insect.abundance = log10(Insect.abundance + 1)) 
+str(db.across)
+
+across <- glm(formula = cbind(successes, failures) ~ Road.verge * Traffic.int + distance + log10(Insect.abundance+1),
+               family = "binomial", data = db.across)
+
+
+# Total along: select only observations where the marked flower was on the same side of the road (Same side=Y), exclude group C
+db.along <- delta.flower %>% 
+  filter(., Same.side == "Y") %>% 
+  filter(., !Group %in% c("1C", "2C")) %>% 
+  mutate(failures = trials - successes) %>% 
+  mutate(delt.flower = scale(delta.flower)) %>% 
+  mutate(insect.abundance = log10(Insect.abundance + 1)) 
+db.along
+str(db.along)
+
+along <- glm(formula = cbind(successes, failures) ~ Road.verge * Traffic.int + distance + log10(Insect.abundance+1),
+               family = "binomial", data = db.along)
+summary(along)
+visreg(along)
+# Total into the neighbouring: select only observations where the marked flower was on the same side of the road (Same side=Y)
+db.into <- delta.flower %>% 
+  filter(., Group %in% c("1C", "2C")) %>% 
+  mutate(failures = trials - successes) %>% 
+  mutate(delt.flower = scale(delta.flower)) %>% 
+  mutate(insect.abundance = log10(Insect.abundance + 1)) 
+db.into
+str(db.into)
+# Same side (red)
+neighb <- glm(formula = cbind(successes, failures) ~ Road.verge * Traffic.int + distance + log10(Insect.abundance+1),
+               family = "binomial", data = db.into)
+
+db.into <- delta.flower %>% 
+  filter(., Group %in% c("1C", "2C")) %>% 
+  mutate(failures = trials - successes) %>% 
+  mutate(delt.flower = scale(delta.flower)) %>% 
+  mutate(insect.abundance = log10(Insect.abundance + 1)) 
+db.into
+str(db.into)
+# Crossed road (blue)
+neighb <- glm(formula = cbind(successes, failures) ~ Road.verge * Traffic.int + distance + log10(Insect.abundance+1),
+               family = "binomial", data = db.into)
+
+```
+
+

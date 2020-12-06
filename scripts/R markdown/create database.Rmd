@@ -1,0 +1,91 @@
+---
+title: "Create database"
+author: "Juliana Dániel Ferreira"
+date: "24 november 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+#rm(list=ls())
+library(here)
+library(tidyverse)
+library(vegan)
+library(lattice)
+library(ggpubr)
+library(car)
+library(psych)
+library(lme4)
+library(glmulti)
+library(visreg)
+library(MASS)
+library(corrplot)
+library(DHARMa)
+```
+
+```{r load data, include=FALSE}
+movement.data <- read.csv2(here("data", "database.csv" ))
+rutor <- read.csv2(here("data", "Provrutor_plants.csv"))
+roadverge <- read.csv2(here("data", "Roadside_colour.csv"))
+width.data <- read.csv2(here("data", "Road_verge_width.csv"))
+
+```
+
+```{r fix movement data}
+str(movement.data)
+mov.freq <- movement.data %>% 
+  mutate(Site = as.factor(Site)) %>% 
+  mutate(Road.verge = as.factor(Road.verge)) %>% 
+  mutate(Side = as.factor(Side)) %>% 
+  rename(trials = Total.no..of.flowers) %>% 
+  rename(successes = Number.marked) %>% 
+  mutate(Same.side = as.factor(Same.side)) %>%
+  mutate(Direction = as.factor(Direction)) %>% 
+  rename(distance = Distance.to.marked..m.) 
+mov.freq
+str(mov.freq)
+```
+```{r fix flower data}
+str(rutor)  
+plants <- rutor %>% 
+  mutate(Site = as.factor(Site)) %>% 
+  mutate(Side = as.factor(Side)) %>% 
+  mutate(Visit = as.factor(Visit)) %>% 
+  mutate(Cut = as.factor(Cut))  
+str(plants) 
+
+# Extract first visit and sum number of flowers per side / site
+flowers.0 <- plants %>% 
+  filter(Visit %in% "1") %>% 
+  group_by(Site, Side, Quadrant.no.) %>% 
+  summarise(Flower.abund = sum(Number.of.flower.heads)/n())
+flowers.0
+
+flower.roadside <- flowers.0 %>% 
+  group_by(Site, Side) %>% 
+  summarise(Flower.abund = sum(Flower.abund))
+flower.roadside
+
+gg.flowerside <- ggplot(flowers.0, aes(x = Site, y = Flower.abund)) + 
+  geom_boxplot(aes(fill=Side)) + labs(x="Site", y="Number of flowers") 
+
+
+```
+
+```{r create database}
+str(roadverge)
+side.metadata <- roadverge %>%
+  mutate(Site = as.factor(Site)) %>% 
+  mutate(Side = as.factor(Side)) %>% 
+  mutate(Colour = as.factor(Colour))
+str(side.metadata)
+
+flowers <- left_join(flower.roadside, side.metadata, by= c("Site", "Side"))
+head(flowers)
+
+db <- left_join(mov.freq, flowers, by= c("Site", "Side"))
+```
+
+```{r Create variables to explore effect of flower abundance in each side on movements}
+
+```
+

@@ -33,3 +33,48 @@ mov.freq <- movement.data %>%
   mutate(direction = ifelse(Side.colour == "A", "x", "y")) %>% 
   mutate(direction = as.factor(direction))
 str(mov.freq)
+
+```{r, iclude=FALSE}  # organzises by traffic intensity. didnt made much sense
+fig <- par(mfrow= c(2,2), mar = c(3,3,3,1))
+dotchart(direction$successes, main = "number of marked", group = direction$traffic)
+dotchart(direction$trials, main = "number of trials", group = direction$traffic)
+dotchart(direction$insects, main = "insect abundance/Traffic intensity", group = direction$traffic)
+dotchart(direction$flower.abund, main = "number flowers/Traffic intensity", group = direction$traffic)
+par(fig)
+```
+# doesnt make much sense:
+```{r, echo=FALSE}
+width.data <- read.csv2(here("data", "Road_verge_width.csv"))
+
+str(width.data)
+rv.width <- width.data %>% 
+  mutate(Site = as.factor(Site)) %>% 
+  mutate(Side = as.factor(Side)) %>% 
+  group_by(Site, Side) %>% 
+  summarise(mean.width.side = sum(Width)/n())
+rv.width
+
+width.db <- left_join(direction, rv.width, by= c("Site", "Side"))
+str(width.db)
+
+# Extract unique observations (20) and test:
+width.unique <- width.db %>% 
+  group_by(Site, traffic, mean.width.side, flower.abund) %>% 
+  summarise()
+width.unique
+
+gg.width <-ggplot(width.unique, aes(x=flower.abund, y=traffic)) + geom_point()
+gg.width
+
+mod.width <- lm(mean.width.side ~ traffic, data= width.unique)
+summary(mod.width)
+plot(mod.width)
+visreg(mod.width)
+ggscatter(width.unique, x="traffic", y="flower.abund", add = "reg.line", conf.int = TRUE, 
+          cor.coef = TRUE, cor.method = "pearson",
+          xlab = "Mean road verge width/site", ylab = "Traffic intensity")
+
+#Check if number of flowers in the road verge is correlated to traffic intensity
+mod.width <- glmer(flower.abund ~ scale(traffic) + (1 | Site), data= width.unique, family = "poisson")
+summary(mod.width)
+
