@@ -12,6 +12,7 @@ library(visreg)
 library(MASS)
 library(corrplot)
 library(DHARMa)
+library(psych)
 
 # Load and check data ----
 movement.data <- read.csv2(here("data", "database_models.csv" ))
@@ -102,6 +103,8 @@ sp.site <- db.plantsp %>%
   group_by(Site, Road.verge, p.rich) %>% 
   summarise()
 sp.site
+describe.by(sp.site, group="Road.verge")
+
 
 mod.sp.sitecat <- lm(p.rich~Road.verge, data=sp.site)
 summary(mod.sp.sitecat)
@@ -160,6 +163,8 @@ summary(insect.traffic.mod)
 plot(insect.traffic.mod) #ok
 visreg(insect.traffic.mod)
 
+cor.test(log10(insect.flower$insect.site+1), insect.flower$traffic, method = "pearson")
+
 # Is the insect abundance different between site categories?
 site.insect <- db %>% 
   group_by(Site, Side, Road.verge) %>% 
@@ -186,6 +191,8 @@ rv.width.site
 
 width.site.type <- left_join(db, rv.width.site, by="Site")
 
+describe.by(width.site.type, group="Road.verge")
+
 # Is the road verge width different between sp poor and sp rich?
 width.flower <- width.site.type %>% 
   group_by(Site, Road.verge, site.width) %>% 
@@ -194,11 +201,13 @@ width.flower
 hist(width.flower$site.width)
 hist(log10(width.flower$site.width +1))
 
-rv.sitecat <- lm(site.width ~ Road.verge, data = width.flower)
+rv.sitecat <- aov(site.width ~ Road.verge, data = width.flower)
 summary(rv.sitecat) # no
+tab_model(rv.sitecat)
 plot(rv.sitecat)
 visreg(rv.sitecat)
 
+cor.test(width.flower$site.width, width.flower$Road.verge, method = "pearson")
 
 # Is the road verge width changing with traffic intensity?
 width.traffic <- width.site.type %>% 
@@ -211,6 +220,8 @@ summary(rv.traffic) # yes
 plot(rv.traffic)
 visreg(rv.traffic)
 
+cor.test(width.traffic$site.width, width.traffic$traffic, method = "pearson")
+
 # Finally, are the number of insects correlated to the number of flowers?
 insect.flower <- left_join(insect.traffic, site.flower, by="Site")
-cor.test(insect.flower$insect.site, insect.flower$flowers.tot, method = "pearson")
+cor.test(log10(insect.flower$insect.site+1), insect.flower$flowers.tot, method = "pearson")
